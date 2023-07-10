@@ -48,7 +48,10 @@ RSpec.describe "teas index page" do
       expect(page).to have_content("Username can't be blank")
     end
 
-    
-    
+    it 'should not have a login button' do
+      visit "/signup"
+
+      expect(page).to_not have_button("Login")
+    end
   end
 end

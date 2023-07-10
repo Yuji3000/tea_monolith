@@ -1,8 +1,13 @@
 <h1> Teas Selection! </h1>
-
+  <% if logged_in? %>
+      <%= button_to "Logout", sessions_path, method: :delete %>
+    <% else %>
+      <%= button_to "Login", login_path, method: :get %>
+  <% end %>
+  
 <% @teas.each do |tea|%>
   <ul><%=tea.title%></ul>
   <ul><%=tea.description%></ul>
   <ul><p>$<%=tea.price_usd%></p></ul><br>
-  <%end%>
+  <% end %>
 

@@ -3,7 +3,3 @@
     <% else %>
       <%= button_to "Login", login_path, method: :get %>
   <% end %>
-<h1>Welcome to the page of <%= @user.username %></h2>
-<% if current_user == @user %>
-  <h3>This is my page!!!</h3>
-<% end %>
