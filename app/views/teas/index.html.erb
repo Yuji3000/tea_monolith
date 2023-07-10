@@ -1,0 +1,8 @@
+<h1> Teas Selection! </h1>
+
+<% @teas.each do |tea|%>
+  <ul><%=tea.title%></ul>
+  <ul><%=tea.description%></ul>
+  <ul><p>$<%=tea.price_usd%></p></ul><br>
+  <%end%>
+
