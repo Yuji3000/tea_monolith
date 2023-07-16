@@ -3,4 +3,7 @@ class Subscription < ApplicationRecord
   belongs_to :tea
 
   validates :status, :frequency_weeks, presence: true
+
+
+
 end

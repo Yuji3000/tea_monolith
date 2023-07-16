@@ -1,9 +1,14 @@
   <% if logged_in? %>
-      <%= button_to "Logout", sessions_path, method: :delete %>
+      <%= link_to "Logout", sessions_path, method: :delete %>
     <% else %>
-      <%= button_to "Login", login_path, method: :get %>
+      <%= link_to "Login", login_path, method: :get %>
   <% end %>
   
+<%= link_to "Home", user_path(current_user)%>
+<%= link_to "Teas", teas_path, method: :get %>
+<%= link_to "My Subscriptions", "/users/#{@user.id}/subscriptions", method: :get %>
+
+
 <h1><%=@tea.title%></h1>
 
 <ul>Description:<%=@tea.description%></ul>

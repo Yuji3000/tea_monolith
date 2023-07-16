@@ -1,0 +1,18 @@
+   <% if logged_in? %>
+      <%= link_to "Logout", sessions_path, method: :delete %>
+  <% end %>
+
+
+  <%= link_to "Teas", teas_path, method: :get %>
+
+ 
+ <% if current_user != nil%>
+  <%= link_to "My Subscriptions", "/users/#{current_user.id}/subscriptions", method: :get %>
+<% end %>
+
+<h1><%=@user.username%>'s Subscriptions</h1>
+
+<% @user.list_teas.map do |tea|%>
+  <%= tea.title%><br>
+  <p>$<%= tea.price_usd%></p><br>
+<% end %>

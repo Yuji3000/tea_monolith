@@ -1,5 +1,6 @@
 class TeasController < ApplicationController
   def index
+    @user = current_user
     @teas = Tea.all
   end
 

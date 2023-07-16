@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       @user.save
-      redirect_to @user
+      redirect_to "/"
     else  
       redirect_to "/signup"
       flash[:alert] = @user.errors.full_messages.to_sentence

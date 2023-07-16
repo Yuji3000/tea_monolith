@@ -1,13 +1,33 @@
-<h1> Teas Selection! </h1>
   <% if logged_in? %>
-      <%= button_to "Logout", sessions_path, method: :delete %>
+      <%= link_to "Logout", sessions_path, method: :delete %>
     <% else %>
-      <%= button_to "Login", login_path, method: :get %>
-  <% end %>
-  
-<% @teas.each do |tea|%>
-  <ul><%=tea.title%></ul>
-  <ul><%=tea.description%></ul>
-  <ul><p>$<%=tea.price_usd%></p></ul><br>
+      <%= form_tag sessions_path do %>
+      <%= label_tag "Username" %>
+      <%= text_field_tag :username, nil, placeholder: "Username" %>
+      <%= label_tag "Password" %>
+      <%= password_field_tag :password, nil, placeholder: "Password" %>
+      <%= submit_tag "Log In"%>
+    <% end %>
+    <%= link_to "Sign Up", "users/new", method: :get %>
   <% end %>
 
+
+<%= link_to "Teas", teas_path, method: :get %> 
+
+ <% if current_user != nil%>
+  <%= link_to "My Subscriptions", "/users/#{current_user.id}/subscriptions", method: :get %>
+<% end %>
+
+<h1> Teas Selection! </h1>
+<div class="container">
+  <% @teas.each do |tea|%>
+    <%=tea.title%>
+    <%=tea.description%>
+    Temp<%=tea.temperature_f%>
+    Brew time in seconds<%=tea.brew_time_seconds%>
+    <p>$<%=tea.price_usd%></p>
+    <% if current_user != nil %>
+      <%= link_to "Add Subscription", "/users/#{current_user.id}/subscriptions/add/tea/#{tea.id}" %>
+    <% end %>
+  <% end %>
+</div>

@@ -37,7 +37,7 @@ RSpec.describe "teas index page" do
       expect(current_path).to eq("/login")
     end
 
-    it "A new user can sign up - sad path" do
+    it "A new user can't sign up - sad path" do
       visit "/signup"
 
       fill_in "Username", with: ""
