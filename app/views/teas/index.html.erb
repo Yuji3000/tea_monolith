@@ -31,3 +31,19 @@
     <% end %>
   <% end %>
 </div>
+
+<% @teas.each do |tea|%>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag ("sencha.jpeg"), width: 10, class: "card-img-top" %>
+    <div class="card-body">
+      <h5 class="card-title">
+        <p><%=tea.title%>   |   $<%=tea.price_usd%></p>
+      </h5>
+      <p class="card-text"><%=tea.description%></p>
+        <% if current_user != nil %>
+          <%= button_to "Add Subscription", "/users/#{current_user.id}/subscriptions/add/tea/#{tea.id}" %>
+        <% end %>
+    </div>
+  </div>
+<% end %>
+
