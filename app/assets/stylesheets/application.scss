@@ -15,7 +15,7 @@
  
  @import "bootstrap";
  
- .gif-wrapper {
+ .home-pic {
   background-image: url(tea_field.jpg);
   position: fixed;
   opacity: .6;
@@ -32,31 +32,33 @@
   background-repeat: no-repeat;
   }
 
-  .enter-button {
-    background-color: rgb(235, 79, 23);
-    color: rgb(175, 201, 60);
-    font-size: 12px;
-    margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-  }
-  .btn-primary {
-      background-color: rgb(223, 194, 8);
-      color: rgb(241, 243, 236);
-      font-size: 14px;
-      border-color: rgb(223, 194, 8);
-      margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-  }
-  .btn-primary:hover {
-    background-color: rgb(223, 194, 8);
-    opacity: .8;
-    border-color: rgb(223, 194, 8);
-  }
+  // .enter-button {
+  //   background-color: rgb(235, 79, 23);
+  //   color: rgb(175, 201, 60);
+  //   font-size: 12px;
+  //   margin: 0;
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     -ms-transform: translateY(-50%);
+  //     transform: translateY(-50%);
+  // }
+  // .btn-primary {
+  //     background-color: rgb(223, 194, 8);
+  //     color: rgb(241, 243, 236);
+  //     font-size: 14px;
+  //     border-color: rgb(223, 194, 8);
+  //     margin: 0;
+  //       position: absolute;
+  //       top: 50%;
+  //       left: 50%;
+  //       -ms-transform: translateY(-50%);
+  //       transform: translateY(-50%);
+  // }
+  // .btn-primary:hover {
+  //   background-color: rgb(223, 194, 8);
+  //   opacity: .8;
+  //   border-color: rgb(223, 194, 8);
+  // }
+
+  

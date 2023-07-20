@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# customer1 = User.create!(id: 1, username: "THECUSTOMER", last_name: "LastesterName", email: "customer@cus.com", address: "123 xmas lane 22822")
-# customer2 = User.create!(id: 2, username: "Sunny", last_name: "Bobo", email: "sunsunr@theBoBO.com", address: "123 xmas lane 22822")
+customer1 = User.create!(email: "test@test.com", password: "test")
+
 
 tea1 = Tea.create!(id: 1, title: "Sencha", price_usd: 1.11, description: "Japanese green tea", temperature_f: 111.0, brew_time_seconds: 111)
 tea2 = Tea.create!(id: 2, title: "Matcha", price_usd: 2.22, description: "Powered Japanese green tea", temperature_f: 222.0, brew_time_seconds: 222 )
@@ -14,7 +14,7 @@ tea3 = Tea.create!(id: 3, title: "Hojicha", price_usd: 2.25, description: "Japan
 tea4 = Tea.create!(id: 4, title: "Matcha iri sencha", price_usd: 2.22, description: "Japanese green tea mixed with matcha", temperature_f: 222.0, brew_time_seconds: 222 )
 tea4 = Tea.create!(id: 5, title: "Sanpincha", price_usd: 2.22, description: "Japanese grown jasmine tea, floral and delicious!", temperature_f: 222.0, brew_time_seconds: 222 )
 
-# subscription1 = Subscription.create!(id: 1, frequency_weeks: 4, customer_id: customer1.id, tea_id: tea1.id, status: "active")
-# subscription2 = Subscription.create!(id: 2, frequency_weeks: 4, customer_id: customer2.id, tea_id: tea2.id, status: "active")
+subscription1 = Subscription.create!(id: 1, frequency_weeks: 4, customer_id: customer1.id, tea_id: tea1.id, status: "active")
+subscription2 = Subscription.create!(id: 2, frequency_weeks: 4, customer_id: customer1.id, tea_id: tea2.id, status: "active")
 
 

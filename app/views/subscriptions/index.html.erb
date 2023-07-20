@@ -10,9 +10,13 @@
   <%= link_to "My Subscriptions", "/users/#{current_user.id}/subscriptions", method: :get %>
 <% end %>
 
-<h1><%=@user.username%>'s Subscriptions</h1>
+<h1>Your Subscriptions</h1>
 
-<% @user.list_teas.map do |tea|%>
-  <%= tea.title%><br>
-  <p>$<%= tea.price_usd%></p><br>
-<% end %>
+<% if @user.subscriptions.present? %>
+  <% @user.list_teas.map do |tea|%>
+    <%= tea.title%><br>
+    <p>$<%= tea.price_usd%></p><br>
+  <% end %>
+<% else %>
+  <p>No Subscriptions yet! </p>
+  <% end %>
