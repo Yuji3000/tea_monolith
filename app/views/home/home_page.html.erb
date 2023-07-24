@@ -20,7 +20,7 @@
 
   <body>
     <div class="home-pic"></div>  
-
+    <i class="bi-house"></i>
 
     
 
@@ -37,12 +37,12 @@
           <% @teas.each do |tea|%>
             <div class="col mb-4">
               <div class="card border-dark mb-3" style="width: 18rem;">
-                <%= image_tag ("sencha.jpeg"), width: 10, class: "card-img-top" %>
+                <%= image_tag ("#{tea.image.name}"), width: 10, class: "card-img-top" %>
                 <div class="card-body">
                   <h5 class="card-title">
                     <p><%=tea.title%>   |   $<%=tea.price_usd%></p>
                   </h5>
-                  <p class="card-text"><%=tea.description%></p>
+                  <p class="card-text"></p>
                     <% if current_user != nil %>
                       <%= button_to "Add Subscription", "/users/#{current_user.id}/subscriptions/add/tea/#{tea.id}" %>
                     <% else %>

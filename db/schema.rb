@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_08_153921) do
+ActiveRecord::Schema.define(version: 2023_07_24_232907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.bigint "tea_id"
+    t.bigint "image_id"
+    t.index ["image_id"], name: "index_images_on_image_id"
+    t.index ["tea_id"], name: "index_images_on_tea_id"
+  end
 
   create_table "subscriptions", force: :cascade do |t|
     t.string "status"
@@ -43,6 +51,8 @@ ActiveRecord::Schema.define(version: 2023_07_08_153921) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "images", "images"
+  add_foreign_key "images", "teas"
   add_foreign_key "subscriptions", "teas"
   add_foreign_key "subscriptions", "users"
 end
