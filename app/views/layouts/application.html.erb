@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+  <style> 
+    .nav .nav-item .nav-link.active {
+      color: black;
+    }
+  </style>
   <head>
     <title>TeaTimeFe</title>
     <%= csrf_meta_tags %>
@@ -12,7 +17,7 @@
   <body>
     <ul class="nav">
       <li class="nav-item">
-        <%= link_to "Home", "/", method: :get, class: "text-decoration-none", class: "nav-link active" %>
+        <%= link_to "Home", "/", method: :get, class: "nav-link active" %>
        
       </li>
       <li class="nav-item">

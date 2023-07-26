@@ -36,11 +36,11 @@
     <div class="row row-cols-2 row-cols-md-3">
           <% @teas.each do |tea|%>
             <div class="col mb-4">
-              <div class="card border-dark mb-3" style="width: 18rem;">
+              <div class="card border-dark mb-3" style="width: 10rem; height: 20rem;">
                 <%= image_tag ("#{tea.image.name}"), width: 10, class: "card-img-top" %>
                 <div class="card-body">
-                  <h5 class="card-title">
-                    <p><%=tea.title%>   |   $<%=tea.price_usd%></p>
+                  <h5 class="card-title" style="font-size: 12px;">
+                    <p><%=tea.title%>  |  $<%=tea.price_usd%></p>
                   </h5>
                   <p class="card-text"></p>
                     <% if current_user != nil %>
