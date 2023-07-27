@@ -14,6 +14,15 @@
 
 Rails.application.routes.draw do
   root to: "home#home_page"
+
+  # get "/payments", to: "payments#create"
+  # get "/payments/new", to: "payments#new"
+  get "payments/success"
+  post "payments/create"
+  post "payments/success"
+  get "payments/cancel"
+
+
   resources :users, only: [:create, :show]
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"

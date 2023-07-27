@@ -43,11 +43,8 @@
                     <p><%=tea.title%>  |  $<%=tea.price_usd%></p>
                   </h5>
                   <p class="card-text"></p>
-                    <% if current_user != nil %>
-                      <%= button_to "Add Subscription", "/users/#{current_user.id}/subscriptions/add/tea/#{tea.id}" %>
-                    <% else %>
-                      <p> Log in to Subscribe</p>
-                    <% end %>
+                      <%= button_to "Subscribe", payments_create_path, method: :post %>
+                    
                 </div>
               </div>
           </div>
