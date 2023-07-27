@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # get "/payments", to: "payments#create"
   # get "/payments/new", to: "payments#new"
   get "payments/success"
-  post "payments/create"
+  post "/payments/create/:tea_id", to: "payments#create"
   post "payments/success"
   get "payments/cancel"
 

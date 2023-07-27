@@ -3,21 +3,19 @@ class PaymentsController < ApplicationController
   end
   
   def create
-     
+    stripe_product = Stripe::Product.retrieve(params[:tea_id])
+    stripe_price = stripe_product[:default_price]
+   
     customer = Stripe::Customer.create(
-      name: "Tom",
-      email: "Tom@tom.com",
-      # name: current_user.full_name,
-      # email: current_user.email,
-      # description: "Customer id: 1",
-      # description: "Customer id: #{current_user.id}",
+      name: current_user.full_name,
+      email: current_user.email,
+      description: "Customer id: #{current_user.id}",
     )
-  
     session = Stripe::Checkout::Session.create( 
       customer: customer, 
       payment_method_types: ["card"],
       line_items: [{
-        price: 'price_1NXWz5Bkm8h4BfJbqnRHCpEG', #price api id usually starts with price_ApIiD
+        price: stripe_price, #price api id starts with price_ApIiD
         quantity: 1,
       }],
       mode: 'subscription',

@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-customer1 = User.create!(id: 4, email: "test@test.com", password: "test")
+customer1 = User.create!(id: 4, full_name: "THE Tester", email: "test@test.com", password: "test")
 
 
 tea1 = Tea.create!(id: 1, title: "Moya(mist) - Premium Sencha", price_usd: 1.11, description: "Earthy and mild", temperature_f: 111.0, brew_time_seconds: 111)
