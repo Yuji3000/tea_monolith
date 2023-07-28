@@ -38,8 +38,6 @@ Possible next steps:
 # Table of Contents
 - [Flow of Application](#app-flow)
 - [Tech & Tools Used](#tech-and-tools)
-- [How to Set Up](#how-to-set-up)
-- [How to Run Test Suite](#how-to-run-test-suite)
 - [Contributors](#contributors)
 
 # Tech and Tools
@@ -69,7 +67,7 @@ Possible next steps:
   <li>Choose a tea and click subscribe</li><br>
    <img src="app/assets/images/one-tea.png">
    <br><br><br>
-   <li>Sign up - users must be signed up to be able to subscribe</li><br>
+   <li>Sign up - users must be signed up to be able to subscribe. Will route to login page.</li><br>
    <img src="app/assets/images/sign-up.png" >
    <br><br><br>
    <li>Login - will route to homepage and user can click subscribe for the tea of their choice</li><br>
