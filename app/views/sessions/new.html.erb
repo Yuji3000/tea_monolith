@@ -1,27 +1,52 @@
-<br><br><br><br>
-    <h2 style="text-align: center;
-        margin-bottom: 40px;
-        font-family: Arial;">
-        Tea Time
-    </h2>
+<style>
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+</style>
+<h2 style="text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-family: Arial;">
+    Tea Time
+</h2>
 
-    <%= form_tag sessions_path do %>
 
-        <div class="field form-group">
-            <%= label_tag "Email" %>
-            <%= text_field_tag :email, nil, placeholder: "name@example.com", class:"form-control" %>
-        </div>
-        <div class="field form-group">
-            <%= label_tag "Password" %>
-            <%= password_field_tag :password, nil, placeholder: "Password", class:"form-control" %>
-        </div>
+    <div class="login-form">  
+        <%= form_tag sessions_path do %>
+            <div class="form-group">
+                <%= label_tag "Email" %>
+                <%= text_field_tag :email, nil, class:"form-control" %>
+            </div>
+            <div class="form-group">
+                <%= label_tag "Password" %>
+                <%= password_field_tag :password, nil, class:"form-control" %>
+            </div>
+            <div class="float-right" >
+                <%= submit_tag "Log In"%>
+            </div>
+        <% end %>
+    </div>
 
 
-        <div  class="actions">
-            <%= submit_tag "Log In"%>
-        </div>
-
-    <% end %>
 <br><br>
 
 

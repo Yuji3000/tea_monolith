@@ -5,52 +5,48 @@
       text-align: center;
        margin: 0;
         top: 33%;
-
-        
     }
     .tea-container {
       margin-top: 20px;
     }
-
     .text-center {
       margin-top: 50px;
       margin-bottom: 110px;
     }
   </style>
 
-
   <body>
-    <div class="home-pic"></div>  
+    
     <i class="bi-house"></i>
 
     
-
-  
-
-    <center>
       <h1 class="text-center"> 
         Pick from our fields 
       </h1>
-    </center>
+    
 
-  <center>
-    <div class="row row-cols-2 row-cols-md-3">
-          <% @teas.each do |tea|%>
-            <div class="col mb-4">
-              <div class="card border-dark mb-3" style="width: 10rem; height: 18rem;">
-                <%= image_tag ("#{tea.images.first}"), class: "card-img-top", style: "height: 140px; width: auto" %>
-                <div class="card-body">
-                  <h5 class="card-title" style="font-size: 12px;">
-                    <p><%=tea.name%>  |  $<%=tea.price%></p>
-                  </h5>
-                  <p class="card-text" style="font-size: 10px; margin-bottom: 1px;"><%= tea.description%></p>
-                      <%= button_to "Subscribe", "/payments/create/#{tea.id}", method: :post %>
+    <div class="container text-center justify-content-center">
+      <div class="row row-cols-2 row-cols-md-3">
+            <% @teas.each do |tea|%>
+              <div class="col mb-4 ">
+                <div class="card border-dark mb-3 shadow-lg bg-white rounded" style="width: 18rem; height: 28rem;">
+                  <%= image_tag ("#{tea.images.first}"), class: "card-img-top", style: "height: auto; width: auto" %>
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-size: 18px;">
+                      <p><%=tea.name%>  |  $<%=tea.price%></p>
+                    </h5>
+                    <p class="card-text" style="font-size: 15px; margin-bottom: 1px;"><%= tea.description%></p>
+                      <% if current_user.present? == true%>
+                        <%= button_to "Subscribe", "/payments/create/#{tea.id}", method: :post %>
+                      <% else %>
+                        <%= button_to "Subscribe", signup_path, method: :get %>
+                      <% end %>
+                  </div>
                 </div>
-              </div>
-          </div>
-        <% end %>
+            </div>
+          <% end %>
+      </div>
     </div>
-  </center>
 
 
   </body>

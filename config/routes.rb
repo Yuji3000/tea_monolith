@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   delete "/sessions", to: "sessions#destroy"
   get "/users/:user_id/subscriptions", to: "subscriptions#index"
 
-  get '/teas', to: 'teas#index'
-  get '/teas/:tea_id', to: 'teas#show'
+
   post '/users/:user_id/subscriptions/add/tea/:tea_id', to: 'subscriptions#create'
 end
