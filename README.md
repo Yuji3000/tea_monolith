@@ -58,7 +58,7 @@ Possible next steps:
   - [RSpec](https://github.com/rspec/rspec-metagem)
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
   - [Pry](https://github.com/pry/pry-rails)
-
+  - [Figaro](https://github.com/laserlemon/figaro)
 
   # App flow
   <li>Home page</li><br>
@@ -67,7 +67,7 @@ Possible next steps:
   <li>Choose a tea and click subscribe</li><br>
    <img src="app/assets/images/one-tea.png">
    <br><br><br>
-   <li>Sign up - users must be signed up to be able to subscribe. Will route to login page.</li><br>
+   <li>Sign up - users must be signed up to be able to subscribe</li><br>
    <img src="app/assets/images/sign-up.png" >
    <br><br><br>
    <li>Login - will route to homepage and user can click subscribe for the tea of their choice</li><br>
