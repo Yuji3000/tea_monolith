@@ -1,23 +1,39 @@
 <h1 align="center">Tea Time</h1>
+<div align="center"><img src="app/assets/images/large-home.png" alt="Homepage large" class="center" width="600" height="auto"></div>
 
-Tea time was originally an api that was created during my time at [Turing School of Software and Design](https://turing.edu/) backend engineering program. <br>
-Tea Time is now converted to a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration. 
+Tea time is a web store application where users can buy monthly subscriptions to their favorite teas.
+Tea time was originally an api that was created during my time at [Turing School of Software and Design's](https://turing.edu/) backend engineering program. 
+Tea Time is now converted to a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration and styled with bootstrap. 
+
+The learning objectives for this project:
+<ul>
+  <li>Create appealing views that are user friendly</li>
+  <li>Integrate with Stripe for an easy checkout experience</li>
+  <li>Create user authentication for login</li>
+</ul>
 
 Current functionality 
 <ol>
   <li>login/logout</li>
   <li>Create an account</li>
   <li>View teas within the homepage</li>
-  <!-- <li>Subscribing to a tea</li> -->
-  <!-- <li>View all subscriptions</li> -->
-  <li>Purchase products and checkout</li>
+  <li>Purchase products/checkout with a credit card</li>
 </ol>
+
+Possible next steps:
+<ul>
+  <li>A thank you page</li>
+  <li>Store more user data(Address, past purchases)</li>
+  <li>Create a cart that all items can be saved to</li>
+  <li>A user can checkout with more than one item in their cart</li>
+  <li>Create other subscription plans and products</li>
+  <li>Admin Features such as checking invoices, viewing cancelled orders etc.</li>
+</ul>
 
 <br>
 
 # Table of Contents
-<!-- - [Learning Goals](#learning-goals)
-- [Planning Documents](#planning-documents) -->
+- [Flow of Application](#app-flow)
 - [Tech & Tools Used](#tech-and-tools)
 - [How to Set Up](#how-to-set-up)
 - [How to Run Test Suite](#how-to-run-test-suite)
@@ -39,18 +55,33 @@ Current functionality
   - [Capybara](https://github.com/teamcapybara/capybara)
   - [Launchy](https://github.com/copiousfreetime/launchy)
   - [RSpec](https://github.com/rspec/rspec-metagem)
-  - [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
   - [Pry](https://github.com/pry/pry-rails)
 
 
-  <!-- - [Faraday](https://lostisland.github.io/faraday/) -->
-  <!-- - [Orderly](https://github.com/jmondo/orderly) -->
-  <!-- - [Figaro](https://github.com/laserlemon/figaro)
-  - [Webmock](https://github.com/bblimke/webmock)
-  - [VCR](https://github.com/vcr/vcr) -->
-  <!-- - [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
-  - [Faker](https://github.com/faker-ruby/faker) -->
+  # App flow
+  <li>Home page</li><br>
+  <img src="app/assets/images/home-page.png" width=auto height=300px>
+  <br><br><br>
+  <li>Choose a tea and click subscribe</li><br>
+   <img src="app/assets/images/one-tea.png">
+   <br><br><br>
+   <li>Sign up - users must be signed up to be able to subscribe</li><br>
+  
+   <img src="app/assets/images/sign-up.png" >
+   <li>Login - will route to homepage and user can click subscribe for the tea of their choice</li><br>
+   <img src="app/assets/images/login.png" >
+   
+   <br><br><br>
+   <li>Pay with card - After payment will route to the home page</li><br>
+   <img src="app/assets/images/pay-with-card.png"  width=auto height=300px>
+   <br><br><br>
+   <li>Success!!</li><br>
+   <img src="app/assets/images/purchase-successful.png">
+  <br><br><br>
+
+
+
 
   # Contributors
 

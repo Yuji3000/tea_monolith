@@ -1,8 +1,4 @@
 class User < ApplicationRecord
-
-  has_many :subscriptions
-  has_many :teas, through: :subscriptions
-
   has_secure_password
   
   validates :email, presence: true, uniqueness: true
@@ -13,5 +9,4 @@ class User < ApplicationRecord
       Tea.find_by_id(sub.tea_id)
     end
   end
-
 end

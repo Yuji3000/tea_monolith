@@ -1,15 +1,19 @@
 class SessionsController < ApplicationController
   def new
   end
-
+  
   def create
-    @user = User.find_by(email: params[:email])
-    if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
-      redirect_to "/"
-    else  
+    if params[:email].present? == false && params[:password].present? == false
       redirect_to "/login"
-      flash[:alert] = "Email or Password Incorrect"
+    else
+      @user = User.find_by(email: params[:email])
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        redirect_to "/"
+      else  
+        redirect_to "/login"
+        flash[:alert] = "Email or Password Incorrect"
+      end
     end
   end
 
