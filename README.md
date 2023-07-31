@@ -22,14 +22,14 @@ Current functionality
   <li>Create an account</li>
   <li>View teas within the homepage</li>
   <li>Purchase products/checkout with a credit card</li>
+  <li>Has a cart that all items can be saved to</li>
+  <li>A user can checkout with more than one item in their cart</li>
 </ol>
 
 Possible next steps:
 <ul>
   <li>A thank you page</li>
   <li>Store more user data(Address, past purchases)</li>
-  <li>Create a cart that all items can be saved to</li>
-  <li>A user can checkout with more than one item in their cart</li>
   <li>Admin Features such as checking invoices, viewing cancelled orders etc.</li>
 </ul>
 
