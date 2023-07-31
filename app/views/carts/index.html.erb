@@ -1,0 +1,10 @@
+<h1> Shopping Cart</h1>
+  <% @cart_items.each do |item| %>
+    <li> <%= item.name %> </li>
+  <% end %>
+
+<% if @cart.present? %>
+  <%= button_to "Buy now", "/payments/create", local: true %>
+<% end %>
+
+

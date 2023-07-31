@@ -15,6 +15,7 @@
   </head>
 
   <body>
+  
     <div class="container-fluid">
       <ul class="nav">
         <li class="nav-item">
@@ -26,6 +27,11 @@
               <%= link_to "Logout", sessions_path, method: :delete, class: "nav-link active"  %>
             <% else %>
               <%= link_to "Log In", sessions_path, method: :new, class: "nav-link active"  %> 
+            <% end %>
+        </li>
+        <li class="nav-item">
+            <% if logged_in? %>
+              <%= link_to "Cart", "carts", method: :get, class: "nav-link active"  %>
             <% end %>
         </li>
         <li class="nav-item">
