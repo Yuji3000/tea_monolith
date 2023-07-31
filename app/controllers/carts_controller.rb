@@ -1,15 +1,20 @@
 class CartsController < ApplicationController
   def index
-    stripe_products = Stripe::Product.list
-    teas = stripe_products[:data].map do |product|
-      stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
-      Product.new(product, stripe_price_retrieve)
+    # stripe_products = Stripe::Product.list
+    # teas = stripe_products[:data].map do |product|
+    #   stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
+    #   Product.new(product, stripe_price_retrieve)
+    # end
+    # @cart_items = @cart.map do |id|
+    #   product = Stripe::Product.retrieve(id)
+    #   stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
+    #   Product.new(product, stripe_price_retrieve)
+    # end
+    
+    @cart_items = @cart.map do |item|
+      Product.where(stripe_product_id: item)
     end
-    @cart_items = @cart.map do |id|
-      product = Stripe::Product.retrieve(id)
-      stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
-      Product.new(product, stripe_price_retrieve)
-    end
+    # require 'pry'; binding.pry
 
   end
 

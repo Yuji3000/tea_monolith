@@ -3,11 +3,14 @@ class PaymentsController < ApplicationController
   end
   
   def create
+    @cart_to_items = @cart.map do |item|
+      Product.where(stripe_product_id: item)
+    end
+
     cart_items = []
-    @cart.map do |id|
+    @cart_to_items.map do |item|
       hash = Hash.new
-      product = Stripe::Product.retrieve(id)
-      hash[:price] = product[:default_price]
+      hash[:price] = item.first.stripe_default_price
       hash[:quantity] = 1
       cart_items << hash
     end

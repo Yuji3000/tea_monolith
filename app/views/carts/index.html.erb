@@ -1,6 +1,6 @@
 <h1> Shopping Cart</h1>
   <% @cart_items.each do |item| %>
-    <li> <%= item.name %> </li>
+    <li> <%= item.first.name %> </li>
   <% end %>
 
 <% if @cart.present? %>

@@ -7,7 +7,7 @@ RSpec.describe Product do
   
     first_product = product_info[:data].first
     product = Product.new(first_product, price_info)
- 
+    require 'pry'; binding.pry
     expect(product.name).to eq("Sanpincha")
     expect(product.price).to eq(12.99)
     expect(product.images).to eq(["https://files.stripe.com/links/MDB8YWNjdF8xTldMTm9Ca204aDRCZkpifGZsX3Rlc3RfVjhaNzBxQlhBUVhEdzRTTmpjRXhkeHZM00zBqoQFCN"])

@@ -5,7 +5,7 @@ Tea time is a web store application where users can buy monthly subscriptions to
 Tea time was originally an api that was created during my time at [Turing School of Software and Design's](https://turing.edu/) backend engineering program. 
 Tea Time is now converted to a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration and styled with bootstrap. 
 
-A store owner can add and remove products from the Stripe dashboard making the products(tea) information on Tea Time dynamic.
+A store owner can add and remove products from the Stripe dashboard. The application is updated by reseeding the database.
 
 
 The learning objectives for this project:
@@ -22,8 +22,8 @@ Current functionality
   <li>Create an account</li>
   <li>View teas within the homepage</li>
   <li>Purchase products/checkout with a credit card</li>
-  <li>Has a cart that all items can be saved to</li>
-  <li>A user can checkout with more than one item in their cart</li>
+  <li>Has a cart that all items can be saved to **Added 7/31/23**</li>
+  <li>A user can checkout with more than one item in their cart **Added 7/31/23**</li>
 </ol>
 
 Possible next steps:

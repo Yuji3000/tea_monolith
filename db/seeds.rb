@@ -6,3 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user1 = User.create!(email: "test@test.com", full_name: "The Tester", password: "123")
+
+stripe_products = Stripe::Product.list
+@teas = stripe_products[:data].map do |product|
+  stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
+  # require 'pry'; binding.pry
+  Product.create(
+    name: product[:name],
+    image: product[:images].first,
+    price: (stripe_price_retrieve[:unit_amount].to_f / 100.00),
+    description: product[:description],
+    stripe_default_price: product[:default_price],
+    stripe_product_id: product[:id], 
+  )
+end
