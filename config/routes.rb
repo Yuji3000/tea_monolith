@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   post "/payments/create", to: "payments#create"
   post "payments/success"
   get "payments/cancel"
-  get "cart", to: "carts#index"
+  get "carts", to: "carts#index"
   post "carts/add_to_cart/:id", to: "carts#add_to_cart", as: "add_to_cart"
   delete "carts/remove_from_cart/:id", to: "carts#remove_from_cart", as: "remove_from_cart"
 
