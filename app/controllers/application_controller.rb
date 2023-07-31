@@ -22,11 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def load_cart
-  #   stripe_products = Stripe::Product.list
-  #   teas = stripe_products[:data].map do |product|
-  #     stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
-  #     Product.new(product, stripe_price_retrieve)
-  #   end
     @cart = session[:cart]
   end
 end
