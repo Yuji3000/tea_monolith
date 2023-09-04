@@ -31,6 +31,7 @@ Possible next steps:
   <li>A thank you page</li>
   <li>Store more user data(Address, past purchases)</li>
   <li>Admin Features such as checking invoices, viewing cancelled orders etc.</li>
+  
 </ul>
 
 <br>
@@ -99,4 +100,3 @@ Possible next steps:
     </td>
   </tr>
 </table>
-
