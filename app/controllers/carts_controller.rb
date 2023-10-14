@@ -3,6 +3,7 @@ class CartsController < ApplicationController
     @cart_items = @cart.map do |item|
       Product.where(stripe_product_id: item)
     end
+    @user = User.find_by_id(session[:user_id])
   end
 
   def add_to_cart

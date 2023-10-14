@@ -32,6 +32,7 @@ class PaymentsController < ApplicationController
   end
   
   def success
+    session[:cart].clear
     redirect_to root_url, notice: "Purchase Successful"
   end
   

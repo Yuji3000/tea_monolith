@@ -1,10 +1,46 @@
-<h1> Shopping Cart</h1>
-  <% @cart_items.each do |item| %>
-    <li> <%= item.first.name %> </li>
-  <% end %>
+<!DOCTYPE html>
+<html>
+  <style>
+    .container-cart {
+      width: 60vw;
+      margin-left: 20vw;
+    }
+    .buy-button {
+      margin-left: 75vw;
+      background-color: #f8f9fa;
+      border-style: none;
+      transition: opacity .15s;
+    }
+ 
+  </style>
+  <body>
+      <h1><%=@user.full_name%>'s Shopping Cart</h1>
+    <div class="container-cart">
+      <table class="table">
+          <thead>
+            <tr class="table-light">
+              <th class=>Item</th>
+              <th class=>name</th>
+              <th class=>Description</th>
+              <th class=>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+              <% @cart_items.each do |item| %>
+              <tr class="table-light">
+                <td><%= image_tag ("#{item.first.image}"), style: "height: 60px; width: 60px"%> </td>
+                <td><%= item.first.name %></td>
+                <td><%= item.first.description%></td>
+                <td>$<%= item.first.price%></td><br/>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </body>
 
-<% if @cart.present? %>
-  <%= button_to "Buy now", "/payments/create", local: true %>
-<% end %>
-
-
+    </div>
+      <% if @cart.present? %>
+        <%= button_to "Buy now", "/payments/create", local: true, class: "buy-button" %>
+      <% end %>
+  </body>
+</html>
