@@ -22,16 +22,18 @@ Current functionality
   <li>Create an account</li>
   <li>View teas within the homepage</li>
   <li>Purchase products/checkout with a credit card</li>
-  <li>Has a cart that all items can be saved to **Added 7/31/23**</li>
-  <li>A user can checkout with more than one item in their cart **Added 7/31/23**</li>
+  <li>Has a cart that all items can be saved to</li>
+  <li>A user can checkout with more than one item in their cart</li>
 </ol>
 
 Possible next steps:
 <ul>
+  <li>Deploy Application</li>
+  <li>Set up CI/CD</li>
   <li>A thank you page</li>
-  <li>Store more user data(Address, past purchases)</li>
+  <li>Store more user data</li>
+  <li>/subscriptions end point</li>
   <li>Admin Features such as checking invoices, viewing cancelled orders etc.</li>
-  
 </ul>
 
 <br>
