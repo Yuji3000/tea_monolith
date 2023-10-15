@@ -2,10 +2,8 @@
 <div align="center"><img src="app/assets/images/large-home.png" alt="Homepage large" class="center" width="600" height="auto"></div>
 
 Tea time is a web store application where users can buy monthly subscriptions to their favorite teas.
-Tea time was originally an api that was created during my time at [Turing School of Software and Design's](https://turing.edu/) backend engineering program. 
-Tea Time is now converted to a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration and styled with bootstrap. 
+Tea Time is a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration...PLUS MORE and styled with bootstrap. 
 
-A store owner can add and remove products from the Stripe dashboard. The application is updated by reseeding the database.
 
 
 The learning objectives for this project:
@@ -76,6 +74,8 @@ Possible next steps:
    <li>Login - will route to homepage and user can click subscribe for the tea of their choice</li><br>
    <img src="app/assets/images/login.png" >
    <br><br><br>
+   <li>Customers can view their cart and navigate to the payment page by clicking the buy button</li><br>
+   <img src="app/assets/images/cart.png"  width=800px height=auto>
    <li>Pay with card - After payment will route to the home page</li><br>
    <img src="app/assets/images/pay-with-card.png"  width=auto height=300px>
    <br><br><br>
