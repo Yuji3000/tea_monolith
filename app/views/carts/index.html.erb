@@ -8,51 +8,50 @@
     .btn.btn-warning {
       width: 100%; 
     }
+    .home-pic {
+      opacity: .8;
+    }
  
   </style>
   <body>
 
-    
-      
-
-
-
-
-    <section class="h-100" >
-      <div class="container h-100 py-5">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-10">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="fw-normal mb-0 text-black">My Cart</h3>
-            </div>
-            <% @cart_items.each do |item| %>  
-            <div class="card rounded-3 mb-4">
-              <div class="card-body p-4">
-                <div class="row d-flex justify-content-between align-items-center">
-                  <div class="col-md-2 col-lg-2 col-xl-2">
-                    <img
-                      src=<%=("#{item.first.image}")%> style="height: 90px; width: 90px"
-                      class="img-fluid rounded-3" alt="Cotton T-shirt">
-                  </div>
-                  <div class="col-md-3 col-lg-3 col-xl-3">
-                    <p class="lead fw-normal mb-2"><%= item.first.name %></p>
-                    <p><span class="text-muted"><%= item.first.description%> </span></p>
-                  </div>
-                  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h5 class="mb-0">$<%= item.first.price%></h5>
+    <section class="h-100">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-10">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-normal mb-0 text-black">My Cart</h3>
+              </div>
+              <% @cart_items.each do |item| %>  
+              <div class="card rounded-3 mb-4">
+                <div class="card-body p-4">
+                  <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        src=<%=("#{item.first.image}")%> style="height: 90px; width: 90px"
+                        class="img-fluid rounded-3" alt="Cotton T-shirt">
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                      <p class="lead fw-normal mb-2"><%= item.first.name %></p>
+                      <p><span class="text-muted"><%= item.first.description%> </span></p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                      <h5 class="mb-0">$<%= item.first.price%></h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <% end %>
-            <div class="card">
-              <div class="card-body">
-                <%= button_to "Buy now", "/payments/create", local: true, class: "btn btn-warning btn-lg btn-block", type: "button" %>
+              <% end %>
+              <div class="card">
+                <div class="card-body">
+                  <%= button_to "Buy now", "/payments/create", local: true, class: "btn btn-warning btn-lg btn-block", type: "button" %>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
     </section>
+    
   </body>
 </html>
