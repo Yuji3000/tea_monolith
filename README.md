@@ -84,8 +84,6 @@ Possible next steps:
   <br><br><br>
 
 
-
-
   # Contributors
 
   <table>
