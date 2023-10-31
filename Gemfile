@@ -50,7 +50,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'launchy'
   gem 'capybara'
-  gem "figaro"
+  gem 'figaro'
 end
 
 group :development do

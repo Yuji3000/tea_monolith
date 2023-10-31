@@ -5,13 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create!(email: "test@test.com", full_name: "The Tester", password: "123")
+user1 = User.find_or_create_bycreate!(email: "test@test.com", full_name: "The Tester", password: "123")
 
 stripe_products = Stripe::Product.list
 @teas = stripe_products[:data].map do |product|
   stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
-  # require 'pry'; binding.pry
-  Product.create(
+  Product.find_or_create_by(
     name: product[:name],
     image: product[:images].first,
     price: (stripe_price_retrieve[:unit_amount].to_f / 100.00),
