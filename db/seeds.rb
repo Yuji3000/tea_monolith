@@ -5,10 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.find_or_create_bycreate!(email: "test@test.com", full_name: "The Tester", password: "123")
+
+user1 = User.find_or_create_by(email: "test@test.com", full_name: "The Tester") do |user|
+  user.password = "123"
+end
 
 stripe_products = Stripe::Product.list
-@teas = stripe_products[:data].map do |product|
+teas = stripe_products[:data].map do |product|
   stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
   Product.find_or_create_by(
     name: product[:name],
