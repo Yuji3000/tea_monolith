@@ -10,13 +10,11 @@
     .tea-container {
       margin-top: 20px;
     }
+
     .text-center {
       margin-top: 50px;
       margin-bottom: 110px;
-    }
-    /* .d-flex {
-      margin-left: 10%;
-    } */
+    } 
     
   </style>
 
@@ -44,12 +42,12 @@
                     </h5>
                       <% if current_user.present? == true %>
                         <% if  @cart.include?(tea.stripe_product_id) %>
-                          <%= button_to "Remove from cart", remove_from_cart_path(tea.stripe_product_id), method: :delete %>
+                          <%= button_to "Remove from cart", remove_from_cart_path(tea.stripe_product_id), method: :delete, class: " btn btn-outline-dark" %>
                         <% else %>
-                          <%= button_to "Add to cart", add_to_cart_path(tea.stripe_product_id), method: :post %>
+                          <%= button_to "Add to cart", add_to_cart_path(tea.stripe_product_id), method: :post, class: " btn btn-outline-dark"  %>
                         <% end %>
                       <% else %>
-                          <%= button_to "Sign up", signup_path, method: :get %>
+                          <%= button_to "Sign up", signup_path, class: " btn btn-outline-dark", method: :get %>
                       <% end %>
                   </div>
                 </div>
@@ -57,9 +55,5 @@
           <% end %>
       </div>
     </div>
-
-
-
-
   </body>
 </html>
