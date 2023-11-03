@@ -14,5 +14,5 @@ services:
         fromDatabase:
           name: teatime
           property: connectionString
-      - key: e0b58f9f79f29c998d0585f5bca98614
+      - key: RAILS_MASTER_KEY
         sync: false
