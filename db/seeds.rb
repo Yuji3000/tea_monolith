@@ -8,7 +8,10 @@
 
 user1 = User.find_or_create_by(email: "test@test.com", full_name: "The Tester") do |user|
   user.password = "123"
-endStripe.api_key = :secret_key
+
+end
+Stripe.api_key = :secret_key
+
 stripe_products = Stripe::Product.list
 
 teas = stripe_products[:data].map do |product|
