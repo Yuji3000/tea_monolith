@@ -13,7 +13,8 @@
  */
 
  
- @import "bootstrap";
+ @import "bootstrap/scss/bootstrap";
+ @import "**/*";
  
  .home-pic {
   background-image: url(tea_field.jpg);
