@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .navbar-right {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+
+    .user-icons {
+      font-size: 2em;
+    }
+
+    i {
+      margin-right: 1em;
+    }
+
+  </style>
+
+
+  <body>
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <%= image_tag("ttlogo.jpg", style: "height: 6rem;  width: auto;") %>
+            <div class="navbar-right">
+            
+              <div class="user-icons d-flex mb-2">
+
+                <%= button_to "<i class='bi bi-house'></i>Home ".html_safe, root_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
+                <%= button_to "<i class='bi bi-cart'></i>Cart ".html_safe, carts_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
+                
+                <% if logged_in? %>
+                  <%= button_to "<i class='bi bi-person'></i>Logout ".html_safe, sessions_path, method: :delete, class: "btn outline-dark", form: { method: 'get' } %>
+                <% else %>
+                  <%= button_to "<i class='bi bi-person'></i>Login ".html_safe, login_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
+                <% end %>
+
+              </div>
+            </div>
+        </div>
+      </nav>
+
+  </body>
+</html>
+

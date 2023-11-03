@@ -1,50 +1,29 @@
 <!DOCTYPE html>
-<html lang="<%= I18n.locale %>">
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <title>TeaTimeFe</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  </head>
+
   <style> 
     .nav .nav-item .nav-link.active {
       color: black;
     }
   </style>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>TeaTimeFe</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
 
   <body>
+    <%= render partial: "layouts/partials/navbar" %>
 
-    <div class="bg-white border-bottom border-dark container-fluid">
-      <ul class="nav">
-        <li class="nav-item">
-          <%= link_to "Home", "/", method: :get, class: "nav-link active" %>
-        
-        </li>
-        <li class="nav-item">
-            <% if logged_in? %>
-              <%= link_to "Logout", sessions_path, method: :delete, class: "nav-link active"  %>
-            <% else %>
-              <%= link_to "Log In", sessions_path, method: :new, class: "nav-link active"  %> 
-            <% end %>
-        </li>
-        <li class="nav-item">
-            <% if logged_in? %>
-              <%= link_to "Cart", "/carts", method: :get, class: "nav-link active"  %>
-            <% end %>
-        </li>
-        <li class="nav-item">
-            <% if !logged_in? %>
-              <%= link_to "Sign Up", "users/new", method: :get, class: "nav-link active"  %>
-            <% end %>
-        </li>
-      </ul>
-    </div>
     <div class="home-pic"></div>  
     <% flash.each do |type, msg| %>
       <div class="alert alert-success" role="alert">
@@ -53,6 +32,7 @@
     <% end %>
     <%= yield %>
     <br>
-    
+    <%= javascript_include_tag 'application' %>
+
   </body>
 </html>
