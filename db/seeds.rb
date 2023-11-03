@@ -8,9 +8,9 @@
 
 user1 = User.find_or_create_by(email: "test@test.com", full_name: "The Tester") do |user|
   user.password = "123"
-end
-
+endStripe.api_key = :secret_key
 stripe_products = Stripe::Product.list
+
 teas = stripe_products[:data].map do |product|
   stripe_price_retrieve = Stripe::Price.retrieve("#{product.default_price}")
   Product.find_or_create_by(
