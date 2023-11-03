@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: tea_time_fe_production
-  username: tea_time_fe
-  password: <%= ENV['TEA_TIME_FE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
