@@ -25,14 +25,7 @@ Current functionality
 </ol>
 
 Possible next steps:
-<ul>
-  <li>Deploy Application</li>
-  <li>Set up CI/CD</li>
-  <li>A thank you page</li>
-  <li>Store more user data</li>
-  <li>/subscriptions end point</li>
-  <li>Admin Features such as checking invoices, viewing cancelled orders etc.</li>
-</ul>
+[Project Board](https://github.com/users/Yuji3000/projects/7/views/1)
 
 <br>
 
