@@ -2,11 +2,12 @@ require "active_support/core_ext/integer/time"
 require "stripe"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  Rails.configuration.stripe = { 
-  :publishable_key => ENV["STRIPE_PUBLISHABLE_KEY"],
-  :secret_key => ENV["STRIPE_SECRET_KEY"]
-  } 
-  Stripe.api_key = Rails.configuration.stripe[:secret_key]
+  config.stripe = {
+  publishable_key: ENV["STRIPE_PUBLISHABLE_KEY"],
+  secret_key: ENV["STRIPE_SECRET_KEY"]
+  }
+  Stripe.api_key = config.stripe[:secret_key]
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
