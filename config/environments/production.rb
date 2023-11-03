@@ -6,7 +6,7 @@ Rails.application.configure do
   :publishable_key => ENV["STRIPE_PUBLISHABLE_KEY"],
   :secret_key => ENV["STRIPE_SECRET_KEY"]
   } 
-Stripe.api_key = Rails.configuration.stripe[:secret_key]
+  Stripe.api_key = Rails.configuration.stripe[:secret_key]
   # Code is not reloaded between requests.
   config.cache_classes = true
 
