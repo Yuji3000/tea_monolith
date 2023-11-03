@@ -10,7 +10,7 @@ user1 = User.find_or_create_by(email: "test@test.com", full_name: "The Tester") 
   user.password = "123"
 
 end
-Stripe.api_key = Rails.configuration.stripe[:secret_key]
+# Stripe.api_key = Rails.configuration.stripe[:secret_key]
 
 stripe_products = Stripe::Product.list
 
