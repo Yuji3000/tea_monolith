@@ -300,7 +300,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   orderly
-  pg (~> 1.1)
+  pg
   pry
   pry-rails
   puma (~> 5.0)
