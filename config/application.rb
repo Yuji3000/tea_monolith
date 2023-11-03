@@ -19,7 +19,7 @@ Bundler.require(*Rails.groups)
 module TeaTimeFe
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 7.0
     # config.action_mailer.default_url_options = { host: "example.com" }
     # config.assets.paths << Rails.root.join("app", "assets", "images")
 
