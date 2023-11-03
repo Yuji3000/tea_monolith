@@ -28,7 +28,7 @@ class PaymentsController < ApplicationController
       success_url:  payments_success_url,
       cancel_url: payments_cancel_url
      )
-     redirect_to session.url
+     redirect_to session.url, status: 303, allow_other_host: true
   end
   
   def success
