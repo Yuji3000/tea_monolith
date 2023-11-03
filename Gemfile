@@ -41,7 +41,7 @@ gem "turbo-rails"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
+gem "figaro"
 gem 'faraday'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
