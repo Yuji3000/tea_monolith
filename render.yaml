@@ -1,6 +1,6 @@
 databases:
-  - name: TeaTime
-    databaseName: TeaTime
+  - name: teatime
+    databaseName: teatime
     user: mtyuji
 
 services:
