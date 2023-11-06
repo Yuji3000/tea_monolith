@@ -36,7 +36,7 @@
                   <%= image_tag ("#{tea.image}"), class: "card-img-top", style: "height: auto; width: auto" %>
                   <div class="card-body d-flex align-items-center flex-column ">
                     <h5 class="card-title d-flex align-items-center flex-column " style="font-size: 18px;">
-                      <p><%=tea.name%>  |  $<%=tea.price%></p>
+                      <p><%=tea.name%>  |  <%=MoneyPresenter.new(tea).format_price%></p>
                       <p class="card-text d-flex align-items-center flex-column" style="font-size: 15px; margin-bottom: 1px;"><%= tea.description%></p>
                     </h5>
                       <% if current_user.present? == true %>
