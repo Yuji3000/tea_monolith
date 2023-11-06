@@ -39,15 +39,11 @@
                       <p><%=tea.name%>  |  <%=MoneyPresenter.new(tea).format_price%></p>
                       <p class="card-text d-flex align-items-center flex-column" style="font-size: 15px; margin-bottom: 1px;"><%= tea.description%></p>
                     </h5>
-                      <% if current_user.present? == true %>
                         <% if  @cart.include?(tea.stripe_product_id) %>
                           <%= button_to "Remove from cart", remove_from_cart_path(tea.stripe_product_id), method: :delete, class: " btn btn-outline-dark" %>
                         <% else %>
                           <%= button_to "Add to cart", add_to_cart_path(tea.stripe_product_id), method: :post, class: " btn btn-outline-dark"  %>
                         <% end %>
-                      <% else %>
-                          <%= button_to "Sign up", signup_path, class: " btn btn-outline-dark", method: :get %>
-                      <% end %>
                   </div>
                 </div>
             </div>
