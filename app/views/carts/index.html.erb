@@ -45,7 +45,12 @@
               <%if @cart.empty? == false%>
               <div class="card">
                 <div class="card-body">
-                    <%= button_to "Buy now", "/login".html_safe, method: :get, class: "btn btn-warning btn-lg btn-block", type: "button"%>
+                <%if current_user != nil%>
+                    <%= button_to "Buy now", "/payments/create", class: "btn btn-warning btn-lg btn-block", type: "button" %>
+                  <% else%>
+                    <%= button_to "Login".html_safe, "/login", method: :get, class: "btn btn-warning btn-lg btn-block", form: { method: 'get' }%>
+
+                  <%end%>
                 </div>
               </div>
               <%else%>
