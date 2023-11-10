@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   delete "/sessions", to: "sessions#destroy"
   get "/users/:user_id/subscriptions", to: "subscriptions#index"
   post '/users/:user_id/subscriptions/add/tea/:tea_id', to: 'subscriptions#create'
-  get "/about", to: "about#index"
+  get "/info", to: "info#index"
 end
