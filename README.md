@@ -10,10 +10,12 @@ Tea Time is a monolith Ruby on Rails application with a [Stripe](https://stripe.
 
 * Use the below information for logging in and payment
 ```
-Email: guest@guest.com
+Email: test@test.com
 Password: 123
 
-When checking out via Stripe make sure to fill out all form fields
+When checking out via Stripe:
+* Fill out all form fields
+* Fake Credit Card info is expected! Please make it realistic. Example credit card expiration date must be valid
 
 Credit Card #: 4242 4242 4242 4242
 
