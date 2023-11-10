@@ -17,7 +17,7 @@
 
  
  .home-pic {
-  background-image: url(tea_field.jpg);
+  background-image: url(tea_field_compressed.jpg);
   position: fixed;
   opacity: .6;
   top: 40%;
@@ -30,6 +30,7 @@
   -webkit-transform: translateX(50%) translateY(50%);
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
+  // object-fit: cover;
   background-repeat: no-repeat;
   }
   
