@@ -17,6 +17,21 @@ class SessionsController < ApplicationController
     end
   end
 
+  def cart_login
+    if params[:email].present? == false && params[:password].present? == false
+      redirect_to "/login"
+    else
+      @user = User.find_by(email: params[:email])
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        redirect_to "/carts"
+      else  
+        redirect_to "/carts"
+        flash[:alert] = "Email or Password Incorrect"
+      end
+    end
+  end
+
   def destroy
     session[:user_id] = nil
     session[:cart] = nil

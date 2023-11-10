@@ -59,8 +59,6 @@
                 
                 <% if logged_in? %>
                   <%= button_to "<i class='bi bi-person'></i>Logout ".html_safe, sessions_path, method: :delete, class: "btn outline-dark", form: { method: 'get' } %>
-                <% else %>
-                  <%= button_to "<i class='bi bi-person'></i>Login ".html_safe, login_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
                 <% end %>
 
               </div>

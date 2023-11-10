@@ -10,9 +10,11 @@ Rails.application.routes.draw do
   post "carts/add_to_cart/:id", to: "carts#add_to_cart", as: "add_to_cart"
   delete "carts/remove_from_cart/:id", to: "carts#remove_from_cart", as: "remove_from_cart"
 
+
   resources :users, only: [:create, :show]
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
+  post "/cart-login", to: "sessions#cart_login"
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy"
   get "/users/:user_id/subscriptions", to: "subscriptions#index"

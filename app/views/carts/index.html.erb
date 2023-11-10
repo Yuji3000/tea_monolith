@@ -11,7 +11,28 @@
     .home-pic {
       opacity: .8;
     }
- 
+    .login-form {
+        width: 340px;
+        margin: 50px auto;
+        font-size: 15px;
+    }
+    .login-form form {
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+    }
   </style>
   <body>
 
@@ -42,23 +63,27 @@
               </div>
               <% end %>
               <%if @cart.empty? == false%>
-              <div class="card">
-                <div class="card-body">
-                <%if current_user != nil%>
-                    <%= button_to "Buy now", "/payments/create", class: "btn btn-warning btn-lg btn-block", type: "button" %>
-                  <% else%>
-                    <%= button_to "Login".html_safe, "/login", method: :get, class: "btn btn-warning btn-lg btn-block", form: { method: 'get' }%>
-                  <%end%>
+                <div class="card">
+                  <div class="card-body">
+                  <%if current_user != nil%>
+                      <%= button_to "Buy now", "/payments/create", class: "btn btn-warning btn-lg btn-block", type: "button" %>
+                    <% else%>
+                        <%= form_tag "/cart-login" do %>
+                          <%= label_tag "Email" %>
+                          <%= text_field_tag :email, nil, class:"form-control" %>
+                          <%= label_tag "Password" %>
+                          <%= password_field_tag :password, nil, class:"form-control" %>
+                          <%= button_to "Log In", "/cart-login", method: :post, class: "btn btn-warning btn-lg btn-block", type: "button"  %>
+                        <% end %>
+                    <%end%>
+                  </div>
                 </div>
-              </div>
               <%else%>
-
                 <div class="card rounded-3 mb-4">
                   <div class="card-body p-4">
                     <p >Your Cart is empty   <i class="bi bi-emoji-frown"></i></p>
                   </div>
                 </div>
-
               <%end%>
             </div>
           </div>
@@ -68,3 +93,9 @@
     
   </body>
 </html>
+
+
+
+
+
+
