@@ -12,7 +12,11 @@ Tea Time is a monolith Ruby on Rails application with a [Stripe](https://stripe.
 ```
 Email: guest@guest.com
 Password: 123
+
+When checking out via Stripe make sure to fill out all form fields
+
 Credit Card #: 4242 4242 4242 4242
+
 ```
 
 
