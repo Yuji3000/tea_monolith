@@ -15,6 +15,6 @@ class CartsController < ApplicationController
   def remove_from_cart
     id = params[:id]
     session[:cart].delete(id)
-    redirect_to root_path
+    redirect_to carts_path
   end
 end

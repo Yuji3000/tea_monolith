@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+</head>
   <style>
+
     .navbar-right {
       display: flex;
       flex-direction: column-reverse;
@@ -15,6 +19,15 @@
       margin-right: .25em;
       font-size: 2em;
     }
+    .bi-cart {
+      position: abosolute;
+    }
+    .cart-counter {
+      font-size: 10px;
+      position: relative;
+      margin-left: -40px;
+
+    }
 
   </style>
 
@@ -28,9 +41,21 @@
             
               <div class="user-icons d-flex mb-2">
 
+
                 <%= button_to "<i class='bi bi-house'></i>Home ".html_safe, root_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
                 <%= button_to "<i class='bi bi-cup-hot'></i>Tea Fun ".html_safe, "/info", method: :get, class: "btn outline-dark", form: { method: 'get' } %>
                 <%= button_to "<i class='bi bi-cart'></i>Cart ".html_safe, carts_path, method: :get, class: "btn outline-dark", form: { method: 'get' } %>
+                  
+
+                <% if @cart.count >= 1 %>
+                  <div class="cart-counter">
+
+                    <i class="bi bi-<%=@cart.count%>-circle-fill"></i>
+
+                  </div>
+                <% end %>
+
+                
                 
                 <% if logged_in? %>
                   <%= button_to "<i class='bi bi-person'></i>Logout ".html_safe, sessions_path, method: :delete, class: "btn outline-dark", form: { method: 'get' } %>
