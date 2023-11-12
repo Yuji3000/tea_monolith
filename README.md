@@ -75,27 +75,16 @@ Possible next steps:
   - [Pry](https://github.com/pry/pry-rails)
   - [Figaro](https://github.com/laserlemon/figaro)
 
-  # App flow
-  <li>Home page</li><br>
-  <img src="app/assets/images/teatimemain.png" width=auto height=300px>
-  <br><br><br>
-  <li>Choose a tea and click add to cart</li><br>
-   <img src="app/assets/images/one-tea.png">
-   <br><br><br>
-   <li>Sign up - users must be signed up to be able to subscribe</li><br>
-   <img src="app/assets/images/sign-up.png" >
-   <br><br><br>
-   <li>Login - will route to homepage and user can click subscribe for the tea of their choice</li><br>
-   <img src="app/assets/images/login.png" >
-   <br><br><br>
-   <li>Customers can view their cart and navigate to the payment page by clicking the buy button</li><br>
-   <img src="app/assets/images/cart.png"  width=800px height=auto>
-   <li>Pay with card - After payment will route to the home page</li><br>
-   <img src="app/assets/images/pay-with-card.png"  width=auto height=300px>
-   <br><br><br>
-   <li>Success!!</li><br>
-   <img src="app/assets/images/purchase-successful.png">
-  <br><br><br>
+# App flow
+  Nov 10, 2023
+
+
+
+
+https://github.com/Yuji3000/tea_monolith/assets/108035840/d8383e0f-2fbd-4cd6-86ad-cd339cfb68e7
+
+
+
 
 
   # Contributors
