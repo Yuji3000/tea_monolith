@@ -33,6 +33,10 @@
       background: #eeeeee;
     }
 
+    .alert {
+      text-align: center;
+      font-size: 1vw;
+    }
   </style>
 
   <body>
@@ -49,4 +53,11 @@
     <%= javascript_include_tag 'application' %>
 
   </body>
+   <script>
+      window.setTimeout(function() {
+        $(".alert.alert-success").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+          });
+        }, 3000);
+    </script>
 </html>
