@@ -12,6 +12,10 @@
       width: 20rem; 
       }
     }
+    
+    .card {
+      border: none;
+    }
 
     .header {
       text-align: center;
@@ -54,7 +58,7 @@
             <% @teas.each do |tea|%>
               <div class="col mb-4 d-flex justify-content-center" >
                 <div class="card mb-3 shadow-lg bg-white rounded">
-                  <%= image_tag ("#{tea.image}"), class: "card-img-top img-fluid" %>
+                  <%= image_tag ("#{tea.image}"), class: "card-img-top img-fluid", style: "object-fit: contain" %>
                   <div class="card-body d-flex align-items-center flex-column ">
                     <h5 class="card-title d-flex align-items-center flex-column " style="font-size: 18px;">
                       <p><%=tea.name%>  |  <%=MoneyPresenter.new(tea).format_price%></p>
