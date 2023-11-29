@@ -9,12 +9,12 @@ class CartsController < ApplicationController
   def add_to_cart
     id = params[:id]
     session[:cart] << id unless session[:cart].include?(id)
-    redirect_to root_path, notice: "Added item to cart!"
+    redirect_to root_path, notice: "Added to cart!"
   end
 
   def remove_from_cart
     id = params[:id]
     session[:cart].delete(id)
-    redirect_to carts_path
+    redirect_to carts_path, notice: "Removed from cart"
   end
 end
