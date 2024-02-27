@@ -62,7 +62,6 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
-# Rails.application.load_seed
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
@@ -70,10 +69,9 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.filter_sensitive_data('STRIPE_PUBLISHABLE_KEY') { ENV['STRIPE_PUBLISHABLE_KEY'] }
-  config.filter_sensitive_data('STRIPE_SECRET_KEY') { ENV['STRIPE_SECRET_KEY'] }
-  config.allow_http_connections_when_no_cassette = true
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.filter_sensitive_data('<tmdb_key>') { ENV['tmdb_key'] }
+#   config.configure_rspec_metadata!
+# end

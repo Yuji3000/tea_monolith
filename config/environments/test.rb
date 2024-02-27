@@ -4,7 +4,7 @@ Rails.application.configure do
     secret_key: ENV["STRIPE_SECRET_KEY"]
     }
     Stripe.api_key = config.stripe[:secret_key]
-    
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -49,4 +49,3 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
-# Rails.application.load_seed

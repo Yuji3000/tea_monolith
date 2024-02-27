@@ -4,9 +4,9 @@
 Tea time is a web store application where users can buy monthly subscriptions to their favorite teas.
 Tea Time is a monolith Ruby on Rails application with a [Stripe](https://stripe.com/?utm_campaign=paid_brand-US_Search_Brand_Stripe_Control-20047966507&utm_medium=cpc&utm_source=google&ad_content=656551963827&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=CjwKCAjwq4imBhBQEiwA9Nx1BsXHpqz8y7v2Er9TTUEDTh2-S3cI86S7QXrWnM1f0Ojq83MILXwwZxoCAyUQAvD_BwE) credit card payment integration, styled with bootstrap. Products can be stored via Stripe's dashboard, making the tea's rendered to the homepage view dynamic. Products are seeded by Stripe API. 
 
+<code style="color : red"> Stay Tuned! This is an on going project </code> <br>
 
-
-*** Tea Time was previously deployed to Render and taken down Feb 27, 2024 due to cost. ***
+* [Deployed App Here](https://teatime-xith.onrender.com/)<br><br>
 
 * Use the below information for logging in and payment
 ```
