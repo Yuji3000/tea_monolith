@@ -49,6 +49,9 @@ RSpec.describe "home" do
       expect(page).to have_content(@product1.name)
       expect(page).to have_content(@product1.description)
       expect(page).to have_content(@product1.price)
+      # within("#thing") do
+      #   expect(page).to have_content("Add to cart")
+      # end
     end
   end
     
