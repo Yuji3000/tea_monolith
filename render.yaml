@@ -3,9 +3,11 @@ databases:
     ipAllowList: []
     databaseName: teatime
     user: tea_time
+    plan: free
 
 services:
   - type: web
+    plan: free
     name: teatime
     env: ruby
     buildCommand: "./render-build.sh"
