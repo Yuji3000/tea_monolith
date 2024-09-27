@@ -1,6 +1,8 @@
 # exit on error
 set -o errexit
 
+# Ensure bundler is installed
+gem install bundler
 bundle binstubs bundler --force
 bundle install
 bundle exec rails assets:precompile

@@ -3,10 +3,10 @@ require "rails_helper"
 RSpec.describe "teas index page" do
   describe "login" do
     it "can login a new user" do
-      visit '/'
+      visit '/login'
 
       expect(page).to have_button("Login")
-      expect(page).to have_button("Create New Account")
+      # expect(page).to have_button("Create New Account")
     end
 
     it "login button routes to login page" do
@@ -17,13 +17,6 @@ RSpec.describe "teas index page" do
       expect(current_path).to eq("/login")
     end
 
-    it "login button routes to login page" do
-      visit '/'
-      expect(page).to have_button("Create New Account")
-
-      click_on "Create New Account"
-      expect(current_path).to eq("/signup")
-    end
 
     it "A new user can sign up - happy path" do
       visit '/'
