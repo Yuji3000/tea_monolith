@@ -85,3 +85,4 @@ production:
   database: tea_time_production
   username: source
   password: bushi11
+  host: /tmp/
